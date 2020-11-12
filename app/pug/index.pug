@@ -1,0 +1,28 @@
+extends main.pug
+
+include ../blocks/header/header.pug
+
+include ../blocks/what_we_can/what_we_can.pug
+
+include ../blocks/feature_products/feature_products.pug
+
+include ../blocks/team/team.pug
+
+include ../blocks/footer/footer.pug
+
+
+
+block title
+	title Training_Project
+
+block pagecontent
+
+	+header()
+
+	+what_we_can()
+
+	+feature_products()
+
+	+team
+	
+	+footer()

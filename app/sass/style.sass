@@ -1,0 +1,129 @@
+@import "vars"
+@import "fonts"
+@import "libs.scss"
+
+@import "../blocks/header/header.sass"
+@import "../blocks/what_we_can/what_we_can.sass"
+@import "../blocks/feature_products/feature_products.sass"
+@import "../blocks/team/team.sass"
+@import "../blocks/footer/footer.sass"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+
+	font-size: 1em
+
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.wrapper
+	display: flex
+	min-height: 100%
+	overflow: hidden
+	flex-direction: column
+
+.container
+	max-width: 1300px
+	margin: 0 auto
+	padding: 0 15px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1
+	font-family: "Extra-bold", sans-serif
+	font-size: 3.750em
+
+h2
+	font-family: "Bold", sans-serif
+	font-size: 2.625em
+	opacity: 0.8
+
+h1, h2
+	text-transform: uppercase
+	margin: -10px 0
+
+h3
+	font-family: "Semibold", sans-serif
+
+p
+	margin: 0
+	line-height: 28px
+
+a
+	text-decoration: none
+	color: #fff
+	justify-content: center
+
+.two__column
+	flex: 0 1 50%
+.two__row
+	display: flex
+	margin: 0 -15px
+
+ul
+	display: flex
+	justify-content: center
+
+	margin: 0
+	padding: 0
+	li
+		list-style-type: none
+		flex-direction: row
+
+.button
+	background-color: $accent
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 55px
+	width: 227px
+	color: #fff
+	border-radius: 5px
+	font-size: 18px
+	font-weight: 700
+	line-height: 34.06px
+	// Text style for "C, ontact"
+	letter-spacing: 0.32px
+	&:active
+		background-color: #fff
+		border: 1px solid
+		border-radius: 5px
+		border-color: $accent
+		color: $accent
+
+.p_line
+	&::after
+		content: ""
+		height: 3px
+		background-color: $accent
+		width: 132px
+		display: flex
+
+@import "media" // Always at the end

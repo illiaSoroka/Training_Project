@@ -1,0 +1,13 @@
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+@include font('italic', italic, 400, '../fonts/opensans-italic-webfont.woff2')
+@include font('Regular', Regular, 400, '../fonts/opensans-regular-webfont.woff2')
+@include font('Semibold', Semibold, 600, '../fonts/opensans-semibold-webfont.woff2')
+@include font('Bold', Bold, 700, '../fonts/opensans-bold-webfont.woff2')
+@include font('Extra-bold', Extra-bold, 800, '../fonts/opensans-extrabold-webfont.woff2')
